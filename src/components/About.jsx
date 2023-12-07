@@ -3,34 +3,36 @@ import { Button } from "react-bootstrap";
 
 const About = () => {
   const [myStyle, setMyStyle] = useState({
-    color: "#245501",
+    color: "black",
     backgroundColor: "#eee",
   });
 
+  const [btnText, setBtnText] = useState("Enable Dark Mode");
+
   const toggleTheme = () => {
-    if (myStyle.color === "#245501") {
+    if (myStyle.color === "black") {
       setMyStyle({
         color: "#eee",
         backgroundColor: "#3b3b3b",
       });
+      setBtnText("Enable Light Mode");
     } else {
       setMyStyle({
-        color: "#245501",
+        color: "black",
         backgroundColor: "#eee",
       });
+      setBtnText("Enable Dark Mode");
     }
   };
 
-  // const [btnText, setBtnText] = useState();
-
-  // const toggleBtnText = () => {
-  //   let button = document.getElementById("btn");
-  //   if (button.innerText === "Enable Dark Mode") {
-  //     setBtnText((button.innerText = "Enable Light Mode"));
-  //   } else {
-  //     setBtnText((button.innerText = "Enable Dark Mode"));
-  //   }
-  // };
+  const toggleBtnText = () => {
+    let button = document.getElementById("btn");
+    if (button.innerText === "Enable Dark Mode") {
+      setBtnText((button.innerText = "Enable Light Mode"));
+    } else {
+      setBtnText((button.innerText = "Enable Dark Mode"));
+    }
+  };
 
   return (
     <div className="container my-5">
@@ -134,7 +136,7 @@ const About = () => {
       </div>
       <div className="my-3">
         <Button id="btn" variant="success" onClick={toggleTheme}>
-          Enable Dark Mode
+          {btnText}
         </Button>
       </div>
     </div>

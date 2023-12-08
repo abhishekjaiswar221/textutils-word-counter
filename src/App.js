@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import TextForms from "./components/TextForms";
-import About from "./components/About";
+// import About from "./components/About";
 import Alert from "./components/Alert";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
 
     setTimeout(() => {
       setAlert(null);
-    }, 2000);
+    }, 2500);
   };
 
   const toggleTheme1 = () => {
@@ -70,18 +70,23 @@ function App() {
 
   return (
     <>
-      <Router>
-        <Navbar
-          title="TextUtils"
-          aboutText="About"
-          mode={mode}
-          switchTheme1={toggleTheme1}
-          switchTheme2={toggleTheme2}
-          switchTheme3={toggleTheme3}
-        />
-        <Alert alert={alert} />
-        <Routes>
-          <Route
+      {/* <Router> */}
+      <Navbar
+        title="TextUtils"
+        aboutText="About"
+        mode={mode}
+        switchTheme1={toggleTheme1}
+        switchTheme2={toggleTheme2}
+        switchTheme3={toggleTheme3}
+      />
+      <Alert alert={alert} />
+      <TextForms
+        showAlert={showAlert}
+        heading="Enter the text to analyze"
+        mode={mode}
+      />
+      {/* <Routes> */}
+      {/* <Route
             exact
             path="/"
             element={
@@ -91,10 +96,10 @@ function App() {
                 mode={mode}
               />
             }
-          />
-          <Route exact path="/about" element={<About />} />
-        </Routes>
-      </Router>
+          /> */}
+      {/* <Route exact path="/about" element={<About />} /> */}
+      {/* </Routes> */}
+      {/* </Router> */}
     </>
   );
 }

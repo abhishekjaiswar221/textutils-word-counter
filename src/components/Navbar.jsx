@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // import logo from "../assets/images/logo.png";
 
 export default function Navbar(props) {
@@ -34,23 +34,21 @@ export default function Navbar(props) {
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link className="nav-link active" aria-current="page" to="/">
+                  <a className="nav-link active" aria-current="page" href="/">
                     Home
-                  </Link>
+                  </a>
+                  {/* <Link className="nav-link active" aria-current="page" to="/">
+                    Home
+                  </Link> */}
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link className="nav-link" to="/about">
                     {props.aboutText}
                   </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" href="/contact-us">
-                    Contact US
-                  </Link>
-                </li>
+                </li> */}
               </ul>
 
-              <div
+              {/* <div
                 className={`form-check form-switch mx-1 text-${
                   props.mode === "light" ? "dark" : "light"
                 }`}
@@ -68,9 +66,9 @@ export default function Navbar(props) {
                 >
                   Dark Mode 1
                 </label>
-              </div>
+              </div> */}
 
-              <div
+              {/* <div
                 className={`form-check form-switch mx-1 text-${
                   props.mode === "light" ? "dark" : "light"
                 }`}
@@ -88,7 +86,7 @@ export default function Navbar(props) {
                 >
                   Dark Mode 2
                 </label>
-              </div>
+              </div> */}
 
               <div
                 className={`form-check form-switch mx-1 text-${

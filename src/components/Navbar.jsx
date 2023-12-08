@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import logo from "../assets/images/logo.png";
 
 export default function Navbar(props) {
@@ -34,18 +34,18 @@ export default function Navbar(props) {
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">
+                  {/* <a className="nav-link active" aria-current="page" href="/">
                     Home
-                  </a>
-                  {/* <Link className="nav-link active" aria-current="page" to="/">
+                  </a> */}
+                  <Link className="nav-link active" aria-current="page" to="/">
                     Home
-                  </Link> */}
+                  </Link>
                 </li>
-                {/* <li className="nav-item">
+                <li className="nav-item">
                   <Link className="nav-link" to="/about">
                     {props.aboutText}
                   </Link>
-                </li> */}
+                </li>
               </ul>
 
               {/* <div

@@ -1,9 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-#logo {
-  height: 45px;
-  width: 180px;
+.placeholder-color::placeholder{
+  color: white;
 }

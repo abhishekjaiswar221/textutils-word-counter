@@ -1,10 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-// import logo from "../assets/images/logo.png";
-
+import PropTypes from "prop-types";
 export default function Navbar(props) {
-  // const logo = require("../assets/images/logo.png");
   return (
     <>
       <nav
@@ -48,44 +45,49 @@ export default function Navbar(props) {
                 </li>
               </ul>
 
-              {/* <div
-                className={`form-check form-switch mx-1 text-${
-                  props.mode === "light" ? "dark" : "light"
-                }`}
-              >
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  role="switch"
-                  id="flexSwitchCheckDefault"
-                  onClick={props.switchTheme1}
-                />
-                <label
-                  className="form-check-label"
-                  htmlFor="flexSwitchCheckDefault"
-                >
-                  Dark Mode 1
-                </label>
-              </div> */}
-
-              {/* <div
-                className={`form-check form-switch mx-1 text-${
-                  props.mode === "light" ? "dark" : "light"
-                }`}
-              >
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  role="switch"
-                  id="flexSwitchCheckDefault"
-                  onClick={props.switchTheme2}
-                />
-                <label
-                  className="form-check-label"
-                  htmlFor="flexSwitchCheckDefault"
-                >
-                  Dark Mode 2
-                </label>
+              {/* <div className="d-flex">
+                <div
+                  className="bg-primary rounded-1 mx-2"
+                  onClick={() => {
+                    props.switchTheme("primary");
+                  }}
+                  style={{ height: "25px", width: "25px", cursor: "pointer" }}
+                ></div>
+                <div
+                  className="bg-danger rounded-1 mx-2"
+                  onClick={() => {
+                    props.switchTheme("danger");
+                  }}
+                  style={{ height: "25px", width: "25px", cursor: "pointer" }}
+                ></div>
+                <div
+                  className="bg-success rounded-1 mx-2"
+                  onClick={() => {
+                    props.switchTheme("success");
+                  }}
+                  style={{ height: "25px", width: "25px", cursor: "pointer" }}
+                ></div>
+                <div
+                  className="bg-warning rounded-1 mx-2"
+                  onClick={() => {
+                    props.switchTheme("warning");
+                  }}
+                  style={{ height: "25px", width: "25px", cursor: "pointer" }}
+                ></div>
+                <div
+                  className="bg-dark rounded-1 mx-2"
+                  onClick={() => {
+                    props.switchTheme("dark");
+                  }}
+                  style={{ height: "25px", width: "25px", cursor: "pointer" }}
+                ></div>
+                <div
+                  className="bg-light rounded-1 mx-2"
+                  onClick={() => {
+                    props.switchTheme("light");
+                  }}
+                  style={{ height: "25px", width: "25px", cursor: "pointer" }}
+                ></div>
               </div> */}
 
               <div
@@ -98,13 +100,15 @@ export default function Navbar(props) {
                   type="checkbox"
                   role="switch"
                   id="flexSwitchCheckDefault"
-                  onClick={props.switchTheme3}
+                  onClick={() => {
+                    props.switchTheme(null);
+                  }}
                 />
                 <label
                   className="form-check-label"
                   htmlFor="flexSwitchCheckDefault"
                 >
-                  Dark Mode 3
+                  Enable Dark Mode
                 </label>
               </div>
             </div>

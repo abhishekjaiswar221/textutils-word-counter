@@ -9,7 +9,6 @@ export default function Navbar(props) {
       >
         <div className="container">
           <div className="navbar-brand">
-            {/* <img src={logo} id="logo" alt="" /> */}
             <h4>{props.title}</h4>
           </div>
           <div className="container">

@@ -60,10 +60,10 @@ function App() {
         />
         <Alert alert={alert} />
         {/* <TextForms
-        showAlert={showAlert}
-        heading="Enter the text to analyze"
-        mode={mode}
-      /> */}
+          showAlert={showAlert}
+          heading="Enter the text to analyze"
+          mode={mode}
+        /> */}
         <Routes>
           <Route
             exact

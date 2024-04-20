@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import TextForms from "./components/TextForms";
 import About from "./components/About";
 import Alert from "./components/Alert";
-import "./App.css";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -30,6 +29,8 @@ function App() {
   //   document.body.classList.remove("bg-success");
   //   document.body.classList.remove("bg-warning");
   // };
+
+  const colorRef = useRef();
   const toggleTheme = (bscls) => {
     // removeBodyClasses();
     // document.body.classList.add("bg-" + bscls);
@@ -46,6 +47,7 @@ function App() {
       document.body.style.color = "black";
       showAlert("Light mode is enabled", "success");
       // document.title = "TextUtils-Light Mode";
+      setPlaceholderColor(false);
     }
   };
 
@@ -59,11 +61,6 @@ function App() {
           switchTheme={toggleTheme}
         />
         <Alert alert={alert} />
-        {/* <TextForms
-          showAlert={showAlert}
-          heading="Enter the text to analyze"
-          mode={mode}
-        /> */}
         <Routes>
           <Route
             exact
@@ -73,7 +70,8 @@ function App() {
                 showAlert={showAlert}
                 heading="Try-TextUtils Text Manipulator"
                 mode={mode}
-                placeholderTextColor={placeholderColor}
+                placeholderColor={placeholderColor}
+                colorRef={colorRef}
               />
             }
           />

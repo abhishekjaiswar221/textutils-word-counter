@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import "../App.css";
 
 const TextForms = (props) => {
   const [text, setText] = useState("");
@@ -46,9 +45,10 @@ const TextForms = (props) => {
         <div className="my-4">
           <textarea
             className={`form-control ${
-              props.placeholderTextColor ? "placeholder-color" : ""
+              props.placeholderColor ? "placeholder-color" : ""
             }`}
-            id="myBox"
+            id="textArea"
+            ref={props.colorRef}
             rows="20"
             value={text}
             onChange={handleOnChange}
